@@ -1,17 +1,22 @@
 import { Component } from '@angular/core';
 
-import { products } from '../products';
+import { products, Users } from '../model';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: 'app-user-list',
+  templateUrl: './user-list.component.html',
+  styleUrls: ['./user-list.component.css']
 })
-export class ProductListComponent {
+export class UserListComponent {
   products = products;
+  users = Users;
 
   share() {
     window.alert('The product has been shared!');
+  }
+
+  onNotify() {
+    window.alert('You will be notified when the product goes on sale');
   }
 }
 

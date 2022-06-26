@@ -1,0 +1,24 @@
+<h2>Users List</h2>
+
+<div *ngFor="let user of users">
+
+  <h3>
+    <a [title]="user.username + ' details'">
+      {{ user.username }}
+    </a>
+  </h3>
+  <h4>ID: {{user.id}}</h4>
+  <p *ngIf="user.role">
+    Role: {{ user.role }}
+  </p>
+  <p *ngIf="user.formation">
+    Formation: {{ user.formation }}
+  </p>
+</div>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

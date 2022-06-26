@@ -1,0 +1,36 @@
+<h2>Register</h2>
+<form  (ngSubmit)="onSubmit()" class="mat-elevation-z3" style="margin: 15px;
+             align-self: center; padding: 15px; width: 100%;">
+    <p class="row">
+        <mat-form-field class="col">
+        <input matInput placeholder="User Name" required autofocus 
+        [(ngModel)]="ulogin.username" name="username" type="text" id='username' autocomplete="username">
+        </mat-form-field>
+    </p>
+
+    <p class="row">
+        <mat-form-field class="col">
+        <input matInput placeholder="User email" required autofocus 
+        [(ngModel)]="ulogin.email" name="email" type="email" id='email' autocomplete="email">
+        </mat-form-field>
+    </p>
+    
+    <p class="row">
+        <mat-form-field class="col">
+            <!-- <button id="toggle-password" type="button" (click)="togglePassword()"  aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button> -->
+            <input matInput placeholder="Password" [(ngModel)]="ulogin.password1" id='password'
+            name="password" type="password" required autocomplete="current-password">
+        </mat-form-field>
+    </p>
+    <p class="row">
+        <mat-form-field class="col">
+            <input matInput placeholder="Repeat Password" [(ngModel)]="ulogin.password2" id='passwordc'
+            name="passwordc" type="password" required autocomplete="current-password">
+        </mat-form-field>
+    </p>
+        <div class="row">
+            <p class="col">
+                <button  class="btn btn-primary" id='sign-in'>Sign in</button>
+            </p>
+        </div>
+</form>
